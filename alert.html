@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alert with Input Text</title>
+    <style>
+        /* CSS-tyylit */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+           
+           
+            position: fixed; /* Keeps the div in place while scrolling */
+            bottom: 10px; /* Distance from the bottom */
+            right: 10px; /* Distance from the right */
+            padding: 10px;
+            background-color: #ba1f41;
+        }
+        .input-field {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function alartti() {
+            var inputText = document.getElementById("inputText").value;
+            alert("Syötit: " + inputText);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Alert with Input Text</h1>
+        <input type="text" id="inputText" class="input-field" placeholder="Syötä jotain">
+        <button class="button" onclick="alartti()">Näytä alert</button>
+    </div>
+</body>
+</html>

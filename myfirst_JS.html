@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>trying js</title>
+        <style>
+              body {
+            height: 2000px; /* Set a large height to enable scrolling */
+        }
+            #moreText {
+                display: none;
+            }
+            .show-more {
+                cursor: pointer;
+                color: blue;
+                text-decoration: underline;
+            }
+            .show-more:hover {
+            color: black; 
+        }
+        </style>
+         <script>
+            window.onload = function() {
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+        </script>
+    </head>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='sad.gif'">Tee minut surulliseksi</button>
+
+<img id="myImage" src="smile.png" style="width:300px">
+
+<button onclick="document.getElementById('myImage').src='smile.png'">Tee minut onnelliseksi</button>
+    <h2>How Do You Make Pizza at Home? 12 Easy Steps</h2>
+    <p>Making pizza from scratch doesn’t have to be hard. In a matter of minutes, you can whip up your own delicious pizza with a handful of simple ingredients.<br>
+     From oven to plate, we’ll guide you through the entire process step by step. Who knew that creating your own pizza could be so easy? 
+     <span id="dots">...</span></p>
+     <span id="moreText"><ol>
+        <li>Combine 1½ C (170 g) self-rising flour and 1 C (240mL) plain Greek yogurt.</li>
+        <li>Stir these ingredients into a dough, then knead it for 8–10 minutes.</li>
+        <li>Spread the dough onto a pizza pan and bake at 500 °F (260 °C) for 5 minutes.</li>
+        <li>Mix together 3 C (710mL) tomato purée and 2 tsp (9.9mL) red wine vinegar.</li>
+        <li>Mince 2 cloves of garlic and stir them into the tomato sauce mixture.</li>
+        <li>Top the pizza dough with sauce, cheese, and your favorite toppings.</li>
+        <li>Bake the pizza for another 5-7 minutes.</li>
+      </ol> 
+      </span>
+    <span id="showMoreLess" class="show-more" onclick="toggleText()">Näyttä Lisää</span>
+
+    <script>
+        function toggleText() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("moreText");
+            var btnText = document.getElementById("showMoreLess");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerText = "Näyttä Lisää";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerText = "Näyttä Vähemmän";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+</body>
+</html>
